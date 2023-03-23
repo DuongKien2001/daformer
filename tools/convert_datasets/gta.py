@@ -45,7 +45,7 @@ def convert_to_train_id(file):
         n = int(np.sum(k_mask))
         if n > 0:
             sample_class_stats[v] = n
-    new_file = file.replace('.png', '_labelTrainIds.png')
+    new_file = '/kaggle/working/_labelTrainIds.png'
     assert file != new_file
     sample_class_stats['file'] = new_file
     Image.fromarray(label_copy, mode='L').save(new_file)
